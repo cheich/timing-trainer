@@ -1,0 +1,103 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+#wrapper {
+  margin: 1rem auto;
+  max-width: 1000px;
+}
+
+button {
+  border: none;
+  padding: 1em 1.5em;
+  background-color: #333;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+button[disabled] {
+  background-color: #777 !important;
+  cursor: default;
+}
+
+input[type="text"] {
+  border: 1px solid #aaa;
+  padding: calc(1em - 1px);
+  margin-bottom: 1rem;
+  background-color: #efefef;
+  border-radius: 3px;
+}
+
+input[type="text"]:focus {
+  border-color: blue;
+}
+
+input[type="text"][disabled] {
+  background-color: #bbb;
+}
+
+.timing-row {
+  font-size: 120%;
+  font-weight: bold;
+  padding: 1em;
+  line-height: 1em;
+  min-width: 100px;
+  display: inline-block;
+  background: #effcf0;
+  border-radius: 3px;
+}
+
+.input-row {
+  display: inline-block;
+}
+
+h1, h2, h3, form, p,
+#statistics,
+#settings {
+  margin: 0 0 1rem 0;
+}
+
+#settings label {
+  display: block;
+}
+
+.label-before {
+  display: inline-block;
+  width: 200px;
+}
+
+#statistics {
+  font-size: 80%;
+}
+
+#list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#result-text {
+  font-weight: bold;
+  height: 40px;
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+code {
+  color: #fff;
+  background-color: #555;
+  display: inline-block;
+  padding: 2px 3px;
+  border-radius: 2px;
+}

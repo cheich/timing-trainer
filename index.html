@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test your timings</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Test your timings</h1>
+      <h2>How-to use</h2>
+      <p>
+        Just hit the space-bar or the unpause-button below to start. Every x millisecond (default: 1000ms) a new time appears.
+        Solve the calculation as quickly as possible. Press enter to quickly submit your answer.
+        Press space to toggle pause/unpause.
+      </p>
+      <p>
+        Input value is simplified: You don't have to separate minutes and seconds.
+        <code>420</code> or <code>4.20</code> will be interpreted as <code>4:20</code> and <code>22</code> as <code>0:22</code>.
+      </p>
+      <div id="settings">
+        <h2>Settings</h2>
+        <label title="Round seconds to 5, 10, 15, 20, ...">
+          <input type="checkbox" id="round-seconds" onchange="pause()" />
+          <span class="label-after">Round seconds in steps of 5</span>
+        </label>
+        <label title="Ignore the minutes in your answer, just type the right seconds">
+          <input type="checkbox" id="ignore-minutes" onchange="pause()" checked="checked" />
+          <span class="label-after">Ignore minutes</span>
+        </label>
+        <label title="Randomly pick one value of this comma-separated list">
+          <span class="label-before">Seconds to add:</span>
+          <input type="text" id="seconds-to-add" value="25,35" placeholder="25,35" onchange="pause()" />
+        </label>
+        <label title="Milliseconds between tasks">
+          <span class="label-before">Time between tasks (ms):</span>
+          <input type="text" id="ms-between" value="1000" placeholder="1000" onchange="pause()" />
+        </label>
+      </div>
+      <h2>Calculate</h2>
+      <form action="" id="input-form">
+        <div class="timing-row">
+          <span id="time"></span>&nbsp;<span id="time-addition"></span>
+        </div>
+        <div class="input-row"> =
+          <input type="text" id="tyit-input" />
+          <button type="submit" id="input-button"><i class="fa fa-check"></i> Check result</button>
+          <button id="pause-button"><i class="fa fa-play"></i> Unpause</button>
+        </div>
+      </form>
+      <p id="result-text"></p>
+      <h2>Statistics</h2>
+      <div id="statistics">
+        <div>
+          Average reaction time: <span id="avg-reaction-time"></span>
+          (<span id="correct-count">0</span>/<span id="count">0</span>)
+        </div>
+        <ul id="list"></ul>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
